@@ -1,5 +1,5 @@
 class DFA:
-    def __init__(self, states, alphabet, start, accept_states, transitions):
+    def __init__(self, states, alphabet, transitions, start, accept_states):
         self.states = states
         self.alphabet = alphabet
         self.transitions = transitions

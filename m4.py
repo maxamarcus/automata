@@ -1,4 +1,4 @@
-from dfa import DFA
+from machine_classes import DFA
 
 # m4 accepts strings that start and end with the same character.
 
@@ -9,12 +9,6 @@ m4 = DFA(
 
     # alphabet
     {'a', 'b'},
-
-    # start
-    's',
-
-    # accept states
-    {'q1', 'r1'},
 
     # transition function
     {
@@ -30,10 +24,11 @@ m4 = DFA(
         ('r1', 'a'): 'r2',
         ('r2', 'a'): 'r2',
         ('r2', 'b'): 'r1'
-    }
-)
+    },
 
-if __name__ == "__main__":
-    print(m4.accepts('aba'))
-    print(m4.accepts('baabbab'))
-    print(m4.accepts('abc'))
+    # start state
+    's',
+
+    # accept states
+    {'q1', 'r1'}
+)
