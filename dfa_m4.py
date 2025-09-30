@@ -1,4 +1,4 @@
-from machine_classes import DFA
+from machine_classes.dfa import DFA
 
 # m4 accepts strings that start and end with the same character.
 
